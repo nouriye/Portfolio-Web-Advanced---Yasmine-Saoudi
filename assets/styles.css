@@ -102,3 +102,10 @@ header nav ul li {
     cursor: pointer;
     border-radius: 3px;
 }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
