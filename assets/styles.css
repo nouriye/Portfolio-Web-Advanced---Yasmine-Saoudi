@@ -28,3 +28,20 @@ header nav ul li {
     height: 400px;
     background: url('../images/image3.jpg') no-repeat center center/cover;
 }
+
+#main-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-banner h2 {
+    color: white;
+    font-size: 2.5em;
+}
