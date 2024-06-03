@@ -45,3 +45,27 @@ header nav ul li {
     color: white;
     font-size: 2.5em;
 }
+
+#projects {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+}
+
+.project img {
+    width: 100%;
+    display: block;
+}
