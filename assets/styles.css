@@ -63,9 +63,14 @@ header nav ul li {
     margin: 10px;
     border: 1px solid #ddd;
     width: 30%;
+    transition: transform 0.3s ease;
 }
 
 .project img {
     width: 100%;
     display: block;
+}
+
+.project:hover {
+    transform: scale(1.1);
 }
