@@ -56,20 +56,17 @@ header h1 {
 }
 
 .project {
-    background: #f4f4f4;
-    padding: 20px;
     margin: 10px;
-    border: 1px solid #ddd;
     width: 30%;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .project img {
     width: 100%;
-    display: block;
+    transition: transform 0.3s ease;
 }
 
-.project:hover {
+.project img:hover {
     transform: scale(1.1);
 }
 
