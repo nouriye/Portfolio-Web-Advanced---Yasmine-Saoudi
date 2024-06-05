@@ -12,18 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
         validateForm();
     });
 
-    // Event listener for project image clicks
+    // Loop door de dynamische array van projecten
     projectElements.forEach((project, index) => {
         projectTitles.push(project.alt);
+        // Event listener voor het clicken van projecten
         project.addEventListener('click', () => {
             alert(`Je hebt geklikt op ${project.alt}`);
         });
+        // Event listener voor het hoveren over projecten
         project.addEventListener('mouseover', () => {
             // Elementen manipuleren: texten website aanpassen bij weghoveren van een project
             banner.querySelector('h2').textContent = projectTitles[index];
             banner.querySelector('p').textContent = `Dit is het omschrijving van ${projectTitles[index]}.`;
             navbarTitle.textContent = `Mijn portfolio (${projectTitles[index]})`;
         });
+        // Event listener voor het weg hoveren van projecten
         project.addEventListener('mouseleave', () => {
             // Elementen manipuleren: texten website aanpassen bij aanklikken van een project
             banner.querySelector('h2').textContent = "Welkom op mijn Portfolio";
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form validation
+    // Form validatie
     function validateForm() {
         const emailInput = subscribeForm.querySelector('input[type="email"]').value;
         if (validateEmail(emailInput)) {
@@ -42,9 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Email validation
+    // Email validatie
     function validateEmail(email) {
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // Gebruik van constanten
+    const API_URL = 'https://jsonplaceholder.typicode.com/todos/1';
+
+    // Arrow function
+    const showMessage = (msg) => console.log(msg);
+
+    // Template literals
+    const message = `Fetchen van test data uit test api ${API_URL}`;
+    showMessage(message);
 });
