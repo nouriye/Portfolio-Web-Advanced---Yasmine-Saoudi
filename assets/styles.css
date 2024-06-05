@@ -6,45 +6,43 @@ body {
 }
 
 header {
-    background: #333;
+    position: sticky;
+    top: 0;
+    background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
+    z-index: 1000;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 10px;
+header h1 {
+    margin: 0;
 }
 
 #main-banner {
     position: relative;
     height: 400px;
+    text-align: center;
     background: url('../images/image3.jpg') no-repeat center center/cover;
 }
 
 #main-banner .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #main-banner h2 {
+    margin-top: 150px;
     color: white;
     font-size: 2.5em;
 }
+
+#main-banner p {
+    color: white;
+}
+
 
 #projects {
     padding: 20px;
