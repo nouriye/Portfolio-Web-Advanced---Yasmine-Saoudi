@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarTitle = document.getElementById('headertitle');
     const projectTitles = [];
 
+    // Event listener for form submission
+    subscribeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validateForm();
+    });
+
     // Event listener for project image clicks
     projectElements.forEach((project, index) => {
         projectTitles.push(project.alt);
@@ -25,4 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
             navbarTitle.textContent = `Mijn portfolio`;
         });
     });
+
+    // Form validation
+    function validateForm() {
+        const emailInput = subscribeForm.querySelector('input[type="email"]').value;
+        if (validateEmail(emailInput)) {
+            alert('Subscription successful!');
+        } else {
+            alert('Invalid email address.');
+        }
+    }
+
+    // Email validation
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(String(email).toLowerCase());
+    }
 });
