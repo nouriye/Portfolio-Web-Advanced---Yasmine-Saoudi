@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function validateForm() {
         const emailInput = subscribeForm.querySelector('input[type="email"]').value;
         if (validateEmail(emailInput)) {
+            console.log("Gebruiker geregistreerd tot de newsletter: " + emailInput);
             alert('Subscription successful!');
         } else {
             alert('Invalid email address.');
