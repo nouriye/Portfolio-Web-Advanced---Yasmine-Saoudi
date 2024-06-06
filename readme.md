@@ -43,3 +43,8 @@
     - Een flexbox wordt gebruikt bij zowel de projectenlijst als de newsletter form.
 21. **(Extra) Responsive website**
     - Website heeft een responsive design.
+   
+
+
+   **Bronnen** 
+   https://www.w3schools.com/js/js_string_templates.asp
