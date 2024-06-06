@@ -82,4 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData((data) => {
         console.log('Data gefetcht:', data);
     });
+
+    // Promise
+    const fetchPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Promise resolved!');
+        }, 2000);
+    });
+    fetchPromise.then(res => console.log(res));
 });
