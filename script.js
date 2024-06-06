@@ -112,7 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching data:', error));
     
     // JSON manipulation and display
-    const jsonData = '{"projects": ' + projectTitles + '}';
+    const jsonData = JSON.stringify({projects: projectTitles});
     const jsonObject = JSON.parse(jsonData);
     console.log('JSON Object:', jsonObject);
+
+    // Basic CSS animation
+    banner.style.transition = 'opacity 2s';
+    banner.style.opacity = '0.8';
 });
