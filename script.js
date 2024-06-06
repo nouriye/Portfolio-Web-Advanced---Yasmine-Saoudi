@@ -97,4 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Async/Await:', data);
     }
     fetchDataAsync();
+
+    // Self executing function
+    (function () {
+        console.log('IIFE executed, '+ projectTitles);
+    })();
 });
