@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Element selection
+    // Elementenselectie + Gebruik van constanten
     const subscribeForm = document.getElementById('newsletter-form');
     const projectElements = document.querySelectorAll('.project img');
     const banner = document.getElementById('main-banner');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validateForm();
     });
 
-    // Loop door de dynamische array van projecten
+    // Iteratie over een array
     projectElements.forEach((project, index) => {
         projectTitles.push(project.alt);
         // Event listener voor het clicken van projecten
@@ -60,4 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Template literals
     const message = `Fetchen van test data uit test api ${API_URL}`;
     showMessage(message);
+
+    // Destructuring
+    const [project1, project2, project3] = ['Project 1', 'Project 2', 'Project 3'];
+
+    // Spread & Rest operator
+    const projects = [...document.querySelectorAll('.project img')];
+    function logProjects(...projectNames) {
+        projectNames.forEach(name => { if(name.alt) console.log(name.alt); else console.log(name);});
+    }
+    logProjects(project1, project2, project3);
+    console.log("");
+    logProjects(...projects);
 });
