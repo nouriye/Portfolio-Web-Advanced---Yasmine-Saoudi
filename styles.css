@@ -104,3 +104,27 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+@media (max-width: 768px) {
+    .project {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    #newsletter form {
+        flex-direction: column;
+    }
+
+    #newsletter input {
+        margin: 10px 0;
+    }
+}
