@@ -67,9 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Spread & Rest operator
     const projects = [...document.querySelectorAll('.project img')];
     function logProjects(...projectNames) {
-        projectNames.forEach(name => { if(name.alt) console.log(name.alt); else console.log(name);});
+        projectNames.forEach(name => console.log(name));
     }
     logProjects(project1, project2, project3);
     console.log("");
-    logProjects(...projects);
+    logProjects(...projectTitles);
+
+    // Callback function
+    function fetchData(callback) {
+        setTimeout(() => {
+            callback(projectTitles);
+        }, 1000);
+    }
+    fetchData((data) => {
+        console.log('Data gefetcht:', data);
+    });
 });
