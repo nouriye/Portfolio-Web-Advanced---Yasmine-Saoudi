@@ -90,4 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     });
     fetchPromise.then(res => console.log(res));
+
+    // Async & Await
+    async function fetchDataAsync() {
+        const data = await fetchPromise;
+        console.log('Async/Await:', data);
+    }
+    fetchDataAsync();
 });
