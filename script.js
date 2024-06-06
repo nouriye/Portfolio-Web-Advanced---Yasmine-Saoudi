@@ -100,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Self executing function
     (function () {
-        console.log('IIFE executed, '+ projectTitles);
+        console.log('IIFE executed, ' + projectTitles);
     })();
+
+    // Fetch data
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Fetched data:', data);
+        })
+        .catch(error => console.error('Error fetching data:', error));
 });
