@@ -116,7 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const jsonObject = JSON.parse(jsonData);
     console.log('JSON Object:', jsonObject);
 
-    // Basic CSS animation
+    // Basisch CSS animation
     banner.style.transition = 'opacity 2s';
     banner.style.opacity = '0.8';
+
+    // Gebruik van LocalStorage
+    localStorage.setItem('user', JSON.stringify(jsonObject));
+    console.log('LocalStorage user:', JSON.parse(localStorage.getItem('user')));
 });
