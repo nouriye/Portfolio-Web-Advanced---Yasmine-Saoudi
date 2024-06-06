@@ -110,4 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Fetched data:', data);
         })
         .catch(error => console.error('Error fetching data:', error));
+    
+    // JSON manipulation and display
+    const jsonData = '{"projects": ' + projectTitles + '}';
+    const jsonObject = JSON.parse(jsonData);
+    console.log('JSON Object:', jsonObject);
 });
