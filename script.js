@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching data:', error));
     
-    // JSON manipulation and display
+    // JSON manipulatie and display
     const jsonData = JSON.stringify({projects: projectTitles});
     const jsonObject = JSON.parse(jsonData);
     console.log('JSON Object:', jsonObject);
@@ -121,6 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.style.opacity = '0.8';
 
     // Gebruik van LocalStorage
-    localStorage.setItem('user', JSON.stringify(jsonObject));
-    console.log('LocalStorage user:', JSON.parse(localStorage.getItem('user')));
+    localStorage.setItem('projects', JSON.stringify(jsonObject));
+    console.log('LocalStorage:', JSON.parse(localStorage.getItem('user')));
 });
