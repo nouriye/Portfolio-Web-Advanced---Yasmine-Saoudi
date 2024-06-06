@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectElements = document.querySelectorAll('.project img');
     const banner = document.getElementById('main-banner');
     const navbarTitle = document.getElementById('headertitle');
-    const projectTitles = [];
 
     // Event listener for form submission
     subscribeForm.addEventListener('submit', (e) => {
@@ -12,9 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         validateForm();
     });
 
+    // Consumer methods
+    const projectTitles = Array.from(projectElements).map(project => project.alt);
+    console.log('ProjectTitles:', projectTitles);
+
     // Iteratie over een array
     projectElements.forEach((project, index) => {
-        projectTitles.push(project.alt);
         // Event listener voor het clicken van projecten
         project.addEventListener('click', () => {
             alert(`Je hebt geklikt op ${project.alt}`);
